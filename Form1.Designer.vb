@@ -27,6 +27,7 @@ Partial Class Form1
         MenuStrip1 = New MenuStrip()
         AdminToolStripMenuItem = New ToolStripMenuItem()
         MyTreeTable = New DataGridView()
+        RefreshButton = New Button()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -76,12 +77,22 @@ Partial Class Form1
         MyTreeTable.Size = New Size(1323, 453)
         MyTreeTable.TabIndex = 3
         ' 
+        ' RefreshButton
+        ' 
+        RefreshButton.Location = New Point(12, 248)
+        RefreshButton.Name = "RefreshButton"
+        RefreshButton.Size = New Size(150, 46)
+        RefreshButton.TabIndex = 4
+        RefreshButton.Text = "Refresh Table"
+        RefreshButton.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(138), CByte(251), CByte(143))
         ClientSize = New Size(1347, 765)
+        Controls.Add(RefreshButton)
         Controls.Add(MyTreeTable)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -105,6 +116,7 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MyTreeTable As DataGridView
+    Friend WithEvents RefreshButton As Button
 
 
 End Class

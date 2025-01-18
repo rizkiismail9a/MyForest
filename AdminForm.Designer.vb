@@ -137,7 +137,7 @@ Partial Class AdminForm
         InputCode.Location = New Point(238, 80)
         InputCode.Name = "InputCode"
         InputCode.Size = New Size(473, 39)
-        InputCode.TabIndex = 12
+        InputCode.TabIndex = 3
         ' 
         ' InputTreeAmount
         ' 
