@@ -20,8 +20,9 @@ Public Class LoginForm
 
             If Rd.HasRows Then
                 If InputPassword.Text = Rd.Item("password") Then
+                    isLoggedIn = True
                     AdminForm.Show()
-                    Me.Close()
+                    Me.Hide()
                 Else
                     MsgBox("Kata Sandi Salah", MsgBoxStyle.Critical, "Error")
                 End If

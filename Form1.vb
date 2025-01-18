@@ -2,7 +2,12 @@
 
 Public Class Form1
     Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
-        LoginForm.Show()
+        If LoginForm.isLoggedIn = True Then
+            AdminForm.Show()
+        Else
+            LoginForm.Show()
+        End If
+
     End Sub
 
     'Koneksi ke database
