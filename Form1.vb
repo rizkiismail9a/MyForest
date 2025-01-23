@@ -27,4 +27,8 @@ Public Class Form1
     Private Sub RefreshButton_Click(sender As Object, e As EventArgs) Handles RefreshButton.Click
         ViewData()
     End Sub
+
+    Private Sub AboutThisAppToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutThisAppToolStripMenuItem.Click
+        AboutUs.Show()
+    End Sub
 End Class

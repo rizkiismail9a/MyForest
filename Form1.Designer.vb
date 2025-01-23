@@ -28,6 +28,7 @@ Partial Class Form1
         AdminToolStripMenuItem = New ToolStripMenuItem()
         MyTreeTable = New DataGridView()
         RefreshButton = New Button()
+        AboutThisAppToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -55,18 +56,18 @@ Partial Class Form1
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(32, 32)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1347, 40)
+        MenuStrip1.Size = New Size(1347, 42)
         MenuStrip1.TabIndex = 2
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' AdminToolStripMenuItem
         ' 
         AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        AdminToolStripMenuItem.Size = New Size(101, 36)
-        AdminToolStripMenuItem.Text = "admin"
+        AdminToolStripMenuItem.Size = New Size(104, 38)
+        AdminToolStripMenuItem.Text = "Admin"
         ' 
         ' MyTreeTable
         ' 
@@ -85,6 +86,12 @@ Partial Class Form1
         RefreshButton.TabIndex = 4
         RefreshButton.Text = "Refresh Table"
         RefreshButton.UseVisualStyleBackColor = True
+        ' 
+        ' AboutThisAppToolStripMenuItem
+        ' 
+        AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
+        AboutThisAppToolStripMenuItem.Size = New Size(199, 38)
+        AboutThisAppToolStripMenuItem.Text = "About This App"
         ' 
         ' Form1
         ' 
@@ -117,6 +124,7 @@ Partial Class Form1
     Friend WithEvents AdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MyTreeTable As DataGridView
     Friend WithEvents RefreshButton As Button
+    Friend WithEvents AboutThisAppToolStripMenuItem As ToolStripMenuItem
 
 
 End Class
