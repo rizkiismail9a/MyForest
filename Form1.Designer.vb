@@ -26,9 +26,10 @@ Partial Class Form1
         Label2 = New Label()
         MenuStrip1 = New MenuStrip()
         AdminToolStripMenuItem = New ToolStripMenuItem()
+        AboutThisAppToolStripMenuItem = New ToolStripMenuItem()
         MyTreeTable = New DataGridView()
         RefreshButton = New Button()
-        AboutThisAppToolStripMenuItem = New ToolStripMenuItem()
+        Panel1 = New Panel()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -59,15 +60,21 @@ Partial Class Form1
         MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1347, 42)
+        MenuStrip1.Size = New Size(1347, 40)
         MenuStrip1.TabIndex = 2
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' AdminToolStripMenuItem
         ' 
         AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        AdminToolStripMenuItem.Size = New Size(104, 38)
+        AdminToolStripMenuItem.Size = New Size(104, 36)
         AdminToolStripMenuItem.Text = "Admin"
+        ' 
+        ' AboutThisAppToolStripMenuItem
+        ' 
+        AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
+        AboutThisAppToolStripMenuItem.Size = New Size(199, 36)
+        AboutThisAppToolStripMenuItem.Text = "About This App"
         ' 
         ' MyTreeTable
         ' 
@@ -87,23 +94,29 @@ Partial Class Form1
         RefreshButton.Text = "Refresh Table"
         RefreshButton.UseVisualStyleBackColor = True
         ' 
-        ' AboutThisAppToolStripMenuItem
+        ' Panel1
         ' 
-        AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
-        AboutThisAppToolStripMenuItem.Size = New Size(199, 38)
-        AboutThisAppToolStripMenuItem.Text = "About This App"
+        Panel1.BackgroundImage = My.Resources.Resources.trees
+        Panel1.BackgroundImageLayout = ImageLayout.Zoom
+        Panel1.Location = New Point(868, 54)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(467, 638)
+        Panel1.TabIndex = 5
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(138), CByte(251), CByte(143))
+        BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1347, 765)
         Controls.Add(RefreshButton)
         Controls.Add(MyTreeTable)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(MenuStrip1)
+        Controls.Add(Panel1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.FixedSingle
         MainMenuStrip = MenuStrip1
         MaximizeBox = False
@@ -125,6 +138,7 @@ Partial Class Form1
     Friend WithEvents MyTreeTable As DataGridView
     Friend WithEvents RefreshButton As Button
     Friend WithEvents AboutThisAppToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
 
 
 End Class
