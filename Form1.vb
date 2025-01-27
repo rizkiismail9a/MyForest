@@ -10,6 +10,21 @@ Public Class Form1
 
     End Sub
 
+    Private Sub SearchTree()
+        Try
+            Dim query = $"SELECT * FROM mytrees WHERE name LIKE '%{InputSearch.Text}%'"
+
+            Da = New OdbcDataAdapter(query, Conn)
+            Ds = New DataSet()
+            Ds.Clear()
+            Da.Fill(Ds, "mytrees")
+            MyTreeTable.DataSource = Ds.Tables("mytrees")
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
     'Koneksi ke database
     Private Sub ViewData()
         Connect()
@@ -26,9 +41,14 @@ Public Class Form1
 
     Private Sub RefreshButton_Click(sender As Object, e As EventArgs) Handles RefreshButton.Click
         ViewData()
+        InputSearch.Text = ""
     End Sub
 
     Private Sub AboutThisAppToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutThisAppToolStripMenuItem.Click
         AboutUs.Show()
+    End Sub
+
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
+        SearchTree()
     End Sub
 End Class

@@ -30,6 +30,8 @@ Partial Class Form1
         MyTreeTable = New DataGridView()
         RefreshButton = New Button()
         Panel1 = New Panel()
+        SearchButton = New Button()
+        InputSearch = New TextBox()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -98,10 +100,28 @@ Partial Class Form1
         ' 
         Panel1.BackgroundImage = My.Resources.Resources.trees
         Panel1.BackgroundImageLayout = ImageLayout.Zoom
-        Panel1.Location = New Point(868, 54)
+        Panel1.Location = New Point(181, 99)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(467, 638)
+        Panel1.Size = New Size(305, 294)
         Panel1.TabIndex = 5
+        ' 
+        ' SearchButton
+        ' 
+        SearchButton.Location = New Point(955, 248)
+        SearchButton.Margin = New Padding(4)
+        SearchButton.Name = "SearchButton"
+        SearchButton.Size = New Size(127, 40)
+        SearchButton.TabIndex = 8
+        SearchButton.Text = "Search"
+        SearchButton.UseVisualStyleBackColor = True
+        ' 
+        ' InputSearch
+        ' 
+        InputSearch.Location = New Point(1091, 248)
+        InputSearch.Margin = New Padding(4)
+        InputSearch.Name = "InputSearch"
+        InputSearch.Size = New Size(243, 39)
+        InputSearch.TabIndex = 7
         ' 
         ' Form1
         ' 
@@ -110,6 +130,8 @@ Partial Class Form1
         BackColor = Color.FromArgb(CByte(138), CByte(251), CByte(143))
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1347, 765)
+        Controls.Add(SearchButton)
+        Controls.Add(InputSearch)
         Controls.Add(RefreshButton)
         Controls.Add(MyTreeTable)
         Controls.Add(Label2)
@@ -139,6 +161,8 @@ Partial Class Form1
     Friend WithEvents RefreshButton As Button
     Friend WithEvents AboutThisAppToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents SearchButton As Button
+    Friend WithEvents InputSearch As TextBox
 
 
 End Class
