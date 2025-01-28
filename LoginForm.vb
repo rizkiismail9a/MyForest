@@ -3,6 +3,7 @@
 Public Class LoginForm
 
     Public isLoggedIn As Boolean
+    Public isFromManagement As Boolean
 
     Private Sub Login()
         Try
@@ -11,17 +12,23 @@ Public Class LoginForm
             End If
 
             Connect()
+
             Dim query = $"SELECT *  FROM admin WHERE username = '{InputUsername.Text}'"
             cmd = New OdbcCommand(query, Conn)
             cmd.ExecuteNonQuery()
-
             Rd = cmd.ExecuteReader
             Rd.Read()
 
             If Rd.HasRows Then
                 If InputPassword.Text = Rd.Item("password") Then
                     isLoggedIn = True
-                    AdminForm.Show()
+
+                    If isFromManagement = True Then
+                        ManagemenPengelola.Show()
+                    Else
+                        AdminForm.Show()
+                    End If
+
                     Me.Hide()
                 Else
                     MsgBox("Kata Sandi Salah", MsgBoxStyle.Critical, "Error")

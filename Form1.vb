@@ -2,6 +2,8 @@
 
 Public Class Form1
     Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
+        LoginForm.isFromManagement = False
+
         If LoginForm.isLoggedIn = True Then
             AdminForm.Show()
         Else
@@ -50,5 +52,15 @@ Public Class Form1
 
     Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
         SearchTree()
+    End Sub
+
+    Private Sub PengelolaToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles PengelolaToolStripMenuItem.Click
+        LoginForm.isFromManagement = True
+
+        If LoginForm.isLoggedIn = True Then
+            ManagemenPengelola.Show()
+        Else
+            LoginForm.Show()
+        End If
     End Sub
 End Class

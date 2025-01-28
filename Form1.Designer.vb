@@ -27,6 +27,7 @@ Partial Class Form1
         MenuStrip1 = New MenuStrip()
         AdminToolStripMenuItem = New ToolStripMenuItem()
         AboutThisAppToolStripMenuItem = New ToolStripMenuItem()
+        PengelolaToolStripMenuItem = New ToolStripMenuItem()
         MyTreeTable = New DataGridView()
         RefreshButton = New Button()
         Panel1 = New Panel()
@@ -59,24 +60,30 @@ Partial Class Form1
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(32, 32)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem, PengelolaToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1347, 40)
+        MenuStrip1.Size = New Size(1347, 42)
         MenuStrip1.TabIndex = 2
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' AdminToolStripMenuItem
         ' 
         AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        AdminToolStripMenuItem.Size = New Size(104, 36)
+        AdminToolStripMenuItem.Size = New Size(104, 38)
         AdminToolStripMenuItem.Text = "Admin"
         ' 
         ' AboutThisAppToolStripMenuItem
         ' 
         AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
-        AboutThisAppToolStripMenuItem.Size = New Size(199, 36)
+        AboutThisAppToolStripMenuItem.Size = New Size(199, 38)
         AboutThisAppToolStripMenuItem.Text = "About This App"
+        ' 
+        ' PengelolaToolStripMenuItem
+        ' 
+        PengelolaToolStripMenuItem.Name = "PengelolaToolStripMenuItem"
+        PengelolaToolStripMenuItem.Size = New Size(138, 38)
+        PengelolaToolStripMenuItem.Text = "Pengelola"
         ' 
         ' MyTreeTable
         ' 
@@ -163,6 +170,7 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents SearchButton As Button
     Friend WithEvents InputSearch As TextBox
+    Friend WithEvents PengelolaToolStripMenuItem As ToolStripMenuItem
 
 
 End Class
