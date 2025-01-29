@@ -50,7 +50,7 @@ Partial Class AboutUs
         ' ListBox1
         ' 
         ListBox1.FormattingEnabled = True
-        ListBox1.Items.AddRange(New Object() {"Muhamad Rizki Ismail (NIM: 240401010126)", "Rizqy Fatih Al Ghifari (NIM: 240401010123)", "Mas’ud Dwi Haryanto (NIM: 240401020078)", "D", "E", "F"})
+        ListBox1.Items.AddRange(New Object() {"Muhamad Rizki Ismail (NIM: 240401010126)", "Rizqy Fatih Al Ghifari (NIM: 240401010123)", "Mas’ud Dwi Haryanto (NIM: 240401020078)", "D", "E"})
         ListBox1.Location = New Point(12, 315)
         ListBox1.Name = "ListBox1"
         ListBox1.Size = New Size(935, 356)
@@ -75,6 +75,7 @@ Partial Class AboutUs
         Controls.Add(ListBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "AboutUs"
         Text = "AboutUs"
         ResumeLayout(False)

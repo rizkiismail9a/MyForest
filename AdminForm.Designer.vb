@@ -22,6 +22,7 @@ Partial Class AdminForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminForm))
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -164,6 +165,7 @@ Partial Class AdminForm
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "AdminForm"
         Text = "AdminForm"
         ResumeLayout(False)

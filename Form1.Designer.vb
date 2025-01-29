@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Label1 = New Label()
         Label2 = New Label()
         MenuStrip1 = New MenuStrip()
@@ -62,42 +63,42 @@ Partial Class Form1
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(32, 32)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem, PengelolaToolStripMenuItem, RegisterToolStripMenuItem, ProfileToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, PengelolaToolStripMenuItem, ProfileToolStripMenuItem, RegisterToolStripMenuItem, AboutThisAppToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1347, 42)
+        MenuStrip1.Size = New Size(1347, 40)
         MenuStrip1.TabIndex = 2
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' AdminToolStripMenuItem
         ' 
         AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        AdminToolStripMenuItem.Size = New Size(104, 38)
+        AdminToolStripMenuItem.Size = New Size(104, 36)
         AdminToolStripMenuItem.Text = "Admin"
         ' 
         ' AboutThisAppToolStripMenuItem
         ' 
         AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
-        AboutThisAppToolStripMenuItem.Size = New Size(180, 38)
+        AboutThisAppToolStripMenuItem.Size = New Size(180, 36)
         AboutThisAppToolStripMenuItem.Text = "Tentang Kami"
         ' 
         ' PengelolaToolStripMenuItem
         ' 
         PengelolaToolStripMenuItem.Name = "PengelolaToolStripMenuItem"
-        PengelolaToolStripMenuItem.Size = New Size(138, 38)
+        PengelolaToolStripMenuItem.Size = New Size(138, 36)
         PengelolaToolStripMenuItem.Text = "Pengelola"
         ' 
         ' RegisterToolStripMenuItem
         ' 
         RegisterToolStripMenuItem.Name = "RegisterToolStripMenuItem"
-        RegisterToolStripMenuItem.Size = New Size(99, 38)
+        RegisterToolStripMenuItem.Size = New Size(99, 36)
         RegisterToolStripMenuItem.Text = "Daftar"
         ' 
         ' ProfileToolStripMenuItem
         ' 
         ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        ProfileToolStripMenuItem.Size = New Size(102, 38)
-        ProfileToolStripMenuItem.Text = "Profile"
+        ProfileToolStripMenuItem.Size = New Size(89, 36)
+        ProfileToolStripMenuItem.Text = "Profil"
         ' 
         ' MyTreeTable
         ' 
@@ -161,6 +162,7 @@ Partial Class Form1
         Controls.Add(Panel1)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MainMenuStrip = MenuStrip1
         MaximizeBox = False
         MinimizeBox = False
