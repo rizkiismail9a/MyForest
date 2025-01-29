@@ -3,8 +3,7 @@
 Public Class ManagemenPengelola
     'Koneksi ke database
     Private Sub ViewData()
-        Connect()
-        Da = New OdbcDataAdapter("SELECT id, name, username FROM admin", Conn)
+        Da = New OdbcDataAdapter("SELECT id, name, username, email FROM admin", Conn)
         Ds = New DataSet()
         Ds.Clear()
         Da.Fill(Ds, "admin")

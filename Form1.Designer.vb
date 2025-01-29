@@ -33,6 +33,7 @@ Partial Class Form1
         Panel1 = New Panel()
         SearchButton = New Button()
         InputSearch = New TextBox()
+        RegisterToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -60,7 +61,7 @@ Partial Class Form1
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(32, 32)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem, PengelolaToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AdminToolStripMenuItem, AboutThisAppToolStripMenuItem, PengelolaToolStripMenuItem, RegisterToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1347, 42)
@@ -130,6 +131,12 @@ Partial Class Form1
         InputSearch.Size = New Size(243, 39)
         InputSearch.TabIndex = 7
         ' 
+        ' RegisterToolStripMenuItem
+        ' 
+        RegisterToolStripMenuItem.Name = "RegisterToolStripMenuItem"
+        RegisterToolStripMenuItem.Size = New Size(119, 38)
+        RegisterToolStripMenuItem.Text = "Register"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
@@ -171,6 +178,7 @@ Partial Class Form1
     Friend WithEvents SearchButton As Button
     Friend WithEvents InputSearch As TextBox
     Friend WithEvents PengelolaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegisterToolStripMenuItem As ToolStripMenuItem
 
 
 End Class

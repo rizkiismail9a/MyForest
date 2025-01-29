@@ -63,4 +63,8 @@ Public Class Form1
             LoginForm.Show()
         End If
     End Sub
+
+    Private Sub RegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterToolStripMenuItem.Click
+        RegisterForm.Show()
+    End Sub
 End Class

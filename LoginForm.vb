@@ -4,6 +4,10 @@ Public Class LoginForm
 
     Public isLoggedIn As Boolean
     Public isFromManagement As Boolean
+    Public userId As Integer
+    Public username As String
+    Public fullname As String
+    Public email As String
 
     Private Sub Login()
         Try
@@ -22,6 +26,10 @@ Public Class LoginForm
             If Rd.HasRows Then
                 If InputPassword.Text = Rd.Item("password") Then
                     isLoggedIn = True
+                    userId = Rd.Item("id")
+                    username = Rd.Item("username")
+                    fullname = Rd.Item("name")
+                    email = Rd.Item("email")
 
                     If isFromManagement = True Then
                         ManagemenPengelola.Show()
