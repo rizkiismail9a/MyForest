@@ -22,6 +22,7 @@ Partial Class ProfileForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfileForm))
         Label1 = New Label()
         InputUsername = New TextBox()
         InputEmail = New TextBox()
@@ -89,6 +90,7 @@ Partial Class ProfileForm
         Controls.Add(InputEmail)
         Controls.Add(InputUsername)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(5)
         Name = "ProfileForm"
         Text = "ProfileForm"

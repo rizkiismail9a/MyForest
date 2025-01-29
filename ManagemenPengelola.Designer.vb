@@ -22,6 +22,7 @@ Partial Class ManagemenPengelola
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManagemenPengelola))
         RefreshButton = New Button()
         DataPengelola = New DataGridView()
         Label1 = New Label()
@@ -30,10 +31,10 @@ Partial Class ManagemenPengelola
         ' 
         ' RefreshButton
         ' 
-        RefreshButton.Location = New Point(184, 233)
-        RefreshButton.Margin = New Padding(2, 1, 2, 1)
+        RefreshButton.Location = New Point(342, 497)
+        RefreshButton.Margin = New Padding(4, 2, 4, 2)
         RefreshButton.Name = "RefreshButton"
-        RefreshButton.Size = New Size(108, 29)
+        RefreshButton.Size = New Size(201, 62)
         RefreshButton.TabIndex = 8
         RefreshButton.Text = "Refresh"
         RefreshButton.UseVisualStyleBackColor = True
@@ -41,32 +42,34 @@ Partial Class ManagemenPengelola
         ' DataPengelola
         ' 
         DataPengelola.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataPengelola.Location = New Point(11, 67)
-        DataPengelola.Margin = New Padding(2, 1, 2, 1)
+        DataPengelola.Location = New Point(20, 143)
+        DataPengelola.Margin = New Padding(4, 2, 4, 2)
         DataPengelola.Name = "DataPengelola"
         DataPengelola.RowHeadersWidth = 82
-        DataPengelola.Size = New Size(454, 152)
+        DataPengelola.Size = New Size(843, 324)
         DataPengelola.TabIndex = 7
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 13.875F)
-        Label1.Location = New Point(137, 9)
-        Label1.Margin = New Padding(2, 0, 2, 0)
+        Label1.Location = New Point(254, 19)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(207, 24)
+        Label1.Size = New Size(403, 42)
         Label1.TabIndex = 5
         Label1.Text = "Managemen Pengelola"
         ' 
         ' ManagemenPengelola
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(476, 273)
+        ClientSize = New Size(884, 582)
         Controls.Add(RefreshButton)
         Controls.Add(DataPengelola)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(6, 6, 6, 6)
         Name = "ManagemenPengelola"
         Text = "Form2"
         CType(DataPengelola, ComponentModel.ISupportInitialize).EndInit()
