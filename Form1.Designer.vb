@@ -29,12 +29,12 @@ Partial Class Form1
         AboutThisAppToolStripMenuItem = New ToolStripMenuItem()
         PengelolaToolStripMenuItem = New ToolStripMenuItem()
         RegisterToolStripMenuItem = New ToolStripMenuItem()
+        ProfileToolStripMenuItem = New ToolStripMenuItem()
         MyTreeTable = New DataGridView()
         RefreshButton = New Button()
         Panel1 = New Panel()
         SearchButton = New Button()
         InputSearch = New TextBox()
-        ProfileToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         CType(MyTreeTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -72,26 +72,32 @@ Partial Class Form1
         ' AdminToolStripMenuItem
         ' 
         AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        AdminToolStripMenuItem.Size = New Size(104, 36)
+        AdminToolStripMenuItem.Size = New Size(104, 38)
         AdminToolStripMenuItem.Text = "Admin"
         ' 
         ' AboutThisAppToolStripMenuItem
         ' 
         AboutThisAppToolStripMenuItem.Name = "AboutThisAppToolStripMenuItem"
-        AboutThisAppToolStripMenuItem.Size = New Size(199, 36)
-        AboutThisAppToolStripMenuItem.Text = "About This App"
+        AboutThisAppToolStripMenuItem.Size = New Size(180, 38)
+        AboutThisAppToolStripMenuItem.Text = "Tentang Kami"
         ' 
         ' PengelolaToolStripMenuItem
         ' 
         PengelolaToolStripMenuItem.Name = "PengelolaToolStripMenuItem"
-        PengelolaToolStripMenuItem.Size = New Size(138, 36)
+        PengelolaToolStripMenuItem.Size = New Size(138, 38)
         PengelolaToolStripMenuItem.Text = "Pengelola"
         ' 
         ' RegisterToolStripMenuItem
         ' 
         RegisterToolStripMenuItem.Name = "RegisterToolStripMenuItem"
-        RegisterToolStripMenuItem.Size = New Size(119, 36)
-        RegisterToolStripMenuItem.Text = "Register"
+        RegisterToolStripMenuItem.Size = New Size(99, 38)
+        RegisterToolStripMenuItem.Text = "Daftar"
+        ' 
+        ' ProfileToolStripMenuItem
+        ' 
+        ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
+        ProfileToolStripMenuItem.Size = New Size(102, 38)
+        ProfileToolStripMenuItem.Text = "Profile"
         ' 
         ' MyTreeTable
         ' 
@@ -137,12 +143,6 @@ Partial Class Form1
         InputSearch.Name = "InputSearch"
         InputSearch.Size = New Size(243, 39)
         InputSearch.TabIndex = 7
-        ' 
-        ' ProfileToolStripMenuItem
-        ' 
-        ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        ProfileToolStripMenuItem.Size = New Size(102, 38)
-        ProfileToolStripMenuItem.Text = "Profile"
         ' 
         ' Form1
         ' 

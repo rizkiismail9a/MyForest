@@ -87,6 +87,8 @@ Public Class AdminForm
 
 
     Private Sub InputTreeAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles InputTreeAmount.KeyPress
+
+        ' Cegah user menginput selain angka
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True 'Beritahu sistem bahwa event sudah ditangani
         End If
