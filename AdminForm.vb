@@ -47,7 +47,7 @@ Public Class AdminForm
 
     Private Sub EditTree()
         Try
-            Dim query = $"UPDATE mytrees SET name = '{InputName.Text}', scientific_name = '{InputSciName.Text}', tree_code = '{InputCode.Text}', tree_amount = '{InputTreeAmount.Text}'"
+            Dim query = $"UPDATE mytrees SET name = '{InputName.Text}', scientific_name = '{InputSciName.Text}', tree_amount = '{InputTreeAmount.Text}' WHERE tree_code = '{InputCode.Text}'"
             cmd = New OdbcCommand(query, Conn)
             cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diubah", MsgBoxStyle.Information, "Sukses")
