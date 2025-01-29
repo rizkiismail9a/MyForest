@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Aplikasi Management Data Pohon merupakan sebuah perangkat lunak berbasis desktop yang dikembangkan menggunakan VB.Net sebagai bagian dari tugas kuliah kelompok. Aplikasi ini dirancang untuk membantu pengelolaan data pohon di suatu kawasan hutan dengan menyediakan fitur pencatatan dan pemantauan yang sistematis. Dalam aplikasi ini, pengguna dapat melihat daftar pohon yang telah ditanam, mencatat tanggal penanaman, serta memantau jumlah pohon terkini.</value>
+  </data>
 </root>
