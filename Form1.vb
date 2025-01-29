@@ -1,16 +1,7 @@
 ﻿Imports System.Data.Odbc
 
 Public Class Form1
-    Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
-        LoginForm.isFromManagement = False
 
-        If LoginForm.isLoggedIn = True Then
-            AdminForm.Show()
-        Else
-            LoginForm.Show()
-        End If
-
-    End Sub
 
     Private Sub SearchTree()
         Try
@@ -54,8 +45,19 @@ Public Class Form1
         SearchTree()
     End Sub
 
+    Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
+        LoginForm.redirect = AdminForm
+
+        If LoginForm.isLoggedIn = True Then
+            AdminForm.Show()
+        Else
+            LoginForm.Show()
+        End If
+
+    End Sub
+
     Private Sub PengelolaToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles PengelolaToolStripMenuItem.Click
-        LoginForm.isFromManagement = True
+        LoginForm.redirect = ManagemenPengelola
 
         If LoginForm.isLoggedIn = True Then
             ManagemenPengelola.Show()
@@ -66,5 +68,15 @@ Public Class Form1
 
     Private Sub RegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterToolStripMenuItem.Click
         RegisterForm.Show()
+    End Sub
+
+    Private Sub ProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfileToolStripMenuItem.Click
+        LoginForm.redirect = ProfileForm
+
+        If LoginForm.isLoggedIn = True Then
+            ProfileForm.Show()
+        Else
+            LoginForm.Show()
+        End If
     End Sub
 End Class

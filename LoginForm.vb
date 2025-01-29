@@ -3,7 +3,7 @@
 Public Class LoginForm
 
     Public isLoggedIn As Boolean
-    Public isFromManagement As Boolean
+    Public redirect As Form
     Public userId As Integer
     Public username As String
     Public fullname As String
@@ -31,11 +31,7 @@ Public Class LoginForm
                     fullname = Rd.Item("name")
                     email = Rd.Item("email")
 
-                    If isFromManagement = True Then
-                        ManagemenPengelola.Show()
-                    Else
-                        AdminForm.Show()
-                    End If
+                    redirect.Show()
 
                     Me.Hide()
                 Else
