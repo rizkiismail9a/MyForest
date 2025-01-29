@@ -17,6 +17,8 @@ Public Class RegisterForm
 
             Me.Close()
 
+            LoginForm.redirect = AdminForm
+
             LoginForm.Show()
 
         Catch ex As Exception
