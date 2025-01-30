@@ -2,6 +2,8 @@
 
 Public Class AdminForm
 
+    Dim idTree As Integer
+
     Private Sub AdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InputCode.Focus()
     End Sub
@@ -37,6 +39,7 @@ Public Class AdminForm
                 InputCode.Text = Rd.Item("tree_code")
                 InputSciName.Text = Rd.Item("scientific_name")
                 InputTreeAmount.Text = Rd.Item("tree_amount")
+                idTree = Rd.Item("id")
             Else
                 MsgBox("Data tidak ditemukan", MsgBoxStyle.Exclamation, "Error")
             End If
@@ -47,7 +50,7 @@ Public Class AdminForm
 
     Private Sub EditTree()
         Try
-            Dim query = $"UPDATE mytrees SET name = '{InputName.Text}', scientific_name = '{InputSciName.Text}', tree_amount = '{InputTreeAmount.Text}' WHERE tree_code = '{InputCode.Text}'"
+            Dim query = $"UPDATE mytrees SET name = '{InputName.Text}', scientific_name = '{InputSciName.Text}', tree_amount = '{InputTreeAmount.Text}', tree_code = '{InputCode.Text}' WHERE id = '{idTree}'"
             cmd = New OdbcCommand(query, Conn)
             cmd.ExecuteNonQuery()
             MsgBox("Data Berhasil Diubah", MsgBoxStyle.Information, "Sukses")
