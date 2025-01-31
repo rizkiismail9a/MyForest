@@ -50,7 +50,7 @@ Partial Class AboutUs
         ' ListBox1
         ' 
         ListBox1.FormattingEnabled = True
-        ListBox1.Items.AddRange(New Object() {"Muhamad Rizki Ismail (NIM: 240401010126)", "Rizqy Fatih Al Ghifari (NIM: 240401010123)", "Mas’ud Dwi Haryanto (NIM: 240401020078)", "Raga Putra Goldirgantara (NIM: 200401010067)", "E"})
+        ListBox1.Items.AddRange(New Object() {"Muhamad Rizki Ismail (NIM: 240401010126)", "Rizqy Fatih Al Ghifari (NIM: 240401010123)", "Mas’ud Dwi Haryanto (NIM: 240401020078)", "Raga Putra Goldirgantara (NIM: 200401010067)", "Sakti Cristopel Lingga (NIM: 240401010125)"})
         ListBox1.Location = New Point(12, 315)
         ListBox1.Name = "ListBox1"
         ListBox1.Size = New Size(935, 356)
