@@ -22,12 +22,14 @@ Partial Class ProfileForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfileForm))
         Label1 = New Label()
         InputUsername = New TextBox()
         InputEmail = New TextBox()
         InputFullname = New TextBox()
-        CloseButton = New Button()
+        ContextMenuStrip1 = New ContextMenuStrip(components)
+        EditButton = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -45,7 +47,6 @@ Partial Class ProfileForm
         InputUsername.Location = New Point(228, 182)
         InputUsername.Margin = New Padding(5)
         InputUsername.Name = "InputUsername"
-        InputUsername.ReadOnly = True
         InputUsername.Size = New Size(599, 39)
         InputUsername.TabIndex = 1
         InputUsername.TextAlign = HorizontalAlignment.Center
@@ -55,7 +56,6 @@ Partial Class ProfileForm
         InputEmail.Location = New Point(228, 270)
         InputEmail.Margin = New Padding(5)
         InputEmail.Name = "InputEmail"
-        InputEmail.ReadOnly = True
         InputEmail.Size = New Size(599, 39)
         InputEmail.TabIndex = 2
         InputEmail.TextAlign = HorizontalAlignment.Center
@@ -65,27 +65,33 @@ Partial Class ProfileForm
         InputFullname.Location = New Point(228, 347)
         InputFullname.Margin = New Padding(5)
         InputFullname.Name = "InputFullname"
-        InputFullname.ReadOnly = True
         InputFullname.Size = New Size(599, 39)
         InputFullname.TabIndex = 3
         InputFullname.TextAlign = HorizontalAlignment.Center
         ' 
-        ' CloseButton
+        ' ContextMenuStrip1
         ' 
-        CloseButton.Location = New Point(456, 451)
-        CloseButton.Margin = New Padding(5)
-        CloseButton.Name = "CloseButton"
-        CloseButton.Size = New Size(153, 46)
-        CloseButton.TabIndex = 4
-        CloseButton.Text = "Close"
-        CloseButton.UseVisualStyleBackColor = True
+        ContextMenuStrip1.ImageScalingSize = New Size(32, 32)
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(61, 4)
+        ' 
+        ' EditButton
+        ' 
+        EditButton.Location = New Point(442, 468)
+        EditButton.Margin = New Padding(6, 4, 6, 4)
+        EditButton.Name = "EditButton"
+        EditButton.RightToLeft = RightToLeft.No
+        EditButton.Size = New Size(152, 47)
+        EditButton.TabIndex = 6
+        EditButton.Text = "Edit"
+        EditButton.UseVisualStyleBackColor = True
         ' 
         ' ProfileForm
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1060, 591)
-        Controls.Add(CloseButton)
+        Controls.Add(EditButton)
         Controls.Add(InputFullname)
         Controls.Add(InputEmail)
         Controls.Add(InputUsername)
@@ -102,5 +108,6 @@ Partial Class ProfileForm
     Friend WithEvents InputUsername As TextBox
     Friend WithEvents InputEmail As TextBox
     Friend WithEvents InputFullname As TextBox
-    Friend WithEvents CloseButton As Button
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents EditButton As Button
 End Class
