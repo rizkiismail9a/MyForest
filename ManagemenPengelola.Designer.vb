@@ -69,9 +69,9 @@ Partial Class ManagemenPengelola
         Controls.Add(DataPengelola)
         Controls.Add(Label1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Margin = New Padding(6, 6, 6, 6)
+        Margin = New Padding(6)
         Name = "ManagemenPengelola"
-        Text = "Form2"
+        Text = "Pengelola"
         CType(DataPengelola, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
