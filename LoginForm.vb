@@ -13,6 +13,8 @@ Public Class LoginForm
         Try
             If InputUsername.Text = "" Or InputPassword.Text = "" Then
                 MsgBox("Isi semua inputan terlebih dahulut", MsgBoxStyle.Critical, "Error")
+
+                Return
             End If
 
             Connect()
